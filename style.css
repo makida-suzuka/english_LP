@@ -19,6 +19,7 @@ body{
 #header{
     padding: 40px 0 0 50px;
     height: 100px;
+    box-sizing: border-box;
 }
 h1.logo{
     margin: 0;
@@ -30,6 +31,7 @@ h1.logo{
 
 #navi{
     top: 0;
+    left: 0; /*top・left指定しないとheaderのpadding分ずれる*/
     background-color: #FF2A2A;
     height: 100vh;
     width: 100vw;
@@ -113,178 +115,7 @@ h1.logo{
 }
 
 
-.sec-title{
-    font-size: 2.25rem;
-    text-align: center;
-    margin: 0 0 100px 0;
-}
-#pickup{
-    padding:  100px 0 50px 0;
-}
-.pickup-list{
-    padding: 0;
-    display: flex;
-}
-.pickup-list li{
-    margin: 0 25px;
-}
-.pickup-list li img{
-    width: 100%;
-}
-
-#feature{
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 50px 15px;
-}
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
-}
-
-.item{
-    max-width: calc((100% - 2 * var(--gap)) / 3);
-    box-shadow: 1px 1px 10px 4px #CCCCCC;
-}
-.item-content{
-    padding: 25px;
-}
-.item img{
-    max-width: 100%;
-}
-.item-img{
-    opacity: 0;
-    visibility: hidden;
-    transition: all 1s;
-    transform: translateY(50px);
-}
-.fade-in{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-.item-text{
-    padding: 15px 0 20px 0;
-    font-weight: bold;
-}
-.item-cat,.item-date{
-    font-size: 0.9rem;
-}
-.item-date{
-    text-align: right;
-}
-
-#contact{
-    background-color: #000000;
-    color: #fff;
-    max-width: 100%;
-    padding: 50px 0;
-}
-#contact .sec-title{
-    color: #fff;
-}
-.contact-wrapper{
-    margin: 0 auto;
-    display: flex;
-    max-width: 1240px;
-    gap: calc(var(--gap) * 4);
-}
-.contact-right,.contact-left{
-    width: calc(100% - calc(var(--gap) * 4) / 2);
-}
-
-.form-example{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.form-example input{
-    padding: 10px;
-    line-height: 1;
-    outline: none;
-}
-.form-example textarea{
-    resize: vertical;
-    outline: none;
-    line-height: 1;
-    padding: 10px;
-    height: 8em;
-}
-.form-example input.input-button{
-    width: 200px;
-    padding: 20px 0;
-    border: #fff solid 1px;
-    background-color: #000000;
-    color: #fff;
-}
-.form-example input.input-button:hover{
-    cursor: pointer;
-    background-color: #fff;
-    color: #000000;
-}
-label{
-    padding-bottom: 3px;
-}
-
-/* footer */
-footer{
-    background: #000000;
-    text-align: center;
-}
-footer p{
-    font-size: 0.65rem;
-    background: #000000;
-    color: #fff;
-    margin: 0;
-    padding:10px 0;
-}
-
-
 /* SP */
 @media screen and (max-width:485px){
-    .header__nav{
-        width: 65%;
-    }
-    .sec-title{
-        font-size: 1.5rem;
-    }
-    #pickup{
-        padding:  80px 0 50px 0;
-    }
-    .pickup-list li{
-        margin: 0 10px;
-    }
-    .grid{
-        display: block;
-        gap: var(--gap);
-    }
-    .item{
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    #contact{
-        padding-top: 80px;
-    }
-    .contact-wrapper{
-        width: 100%;
-        display: block;
-    }
-    .contact-right,.contact-left{
-        width: 100%;
-        padding: 0 15px 10px 15px;
-        box-sizing: border-box;
-    }
-    .form-example input.input-button{
-        width: 100%;
-        font-size: 100%;
-        font-family: serif;
-    }
-    .form-example input{
-        border-radius: 0;
-    }
-    .form-example textarea{
-        border-radius: 0;
-    }
+
 }
