@@ -215,6 +215,23 @@ h1.logo{
     animation-delay: 10s;
 }
 
+.sec-title{
+    position: relative;
+    font-size: 2.25rem;
+    text-align: center;
+    margin:0 0 30px 0;
+}
+.sec-title::before{
+    content: "";
+    height: 3px;
+    background-color: #333333;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 100px;
+    bottom: -10px;
+}
+
 @keyframes slideAnime {
 	0%, 50%, 100% { opacity: 0; } /* 非表示のタイミング */
 	20%, 33% { opacity: 1; } /* 表示されるタイミング */
