@@ -237,6 +237,104 @@ h1.logo{
 	20%, 33% { opacity: 1; } /* 表示されるタイミング */
 }
 
+
+/*reason*/
+#reason{
+    margin-bottom: 120px;
+}
+.red-bg{
+    background-color: #FF2A2A;
+    padding: 80px 0;
+    position: relative;
+}
+.red-contents{
+    background-color: #FFF;
+    padding: 80px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.red-contents .icon{
+    max-width: 100%;
+    margin-right: 20px;
+    height: 60px;
+
+}
+.red-text{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #FF2A2A;
+}
+.reason-text p{
+    margin: 0;
+}
+.reason-left{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+     animation: slide-left 0.5s ease-out 0s 1 forwards;
+}
+.reason-right{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 0;
+}
+
+
+/*voice*/
+#voice{
+    width: 860px;
+    margin: 0 auto;
+}
+.student-voice{
+    display: flex;
+    align-items: end;
+}
+.student{
+    text-align: center;
+}
+.student-name{
+    font-size: 0.75rem;
+}
+.student-img{
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    width: 120px;
+}
+.student-voice .message{
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 1.5em 1.5em 15px;
+  padding: 20px;
+  min-width: 120px;
+  max-width: 60%;
+  font-size: 16px;
+  background: #E9F1FB;
+  border-radius: 20px;
+}
+.student-voice .message::before{
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #E9F1FB;
+}
+.student-voice .message.right-balloon::before{
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #E9F1FB;
+}
+.student-voice .right-balloon{
+    margin-left: auto;
+}
+
+
 /* SP */
 @media screen and (max-width:485px){
 
