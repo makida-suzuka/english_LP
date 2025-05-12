@@ -125,31 +125,72 @@ h1.logo{
 .mainvisual-text{
     position: absolute;
     z-index: 200;
+    top: 230px;
+    left: 135px;
 }
 
 .mainvisual-text p{
     font-size: 2.75rem;
     font-weight: bold;
     margin:0 0 30px 0;
-    text-shadow:1px 1px 2px #fff;
+    text-shadow: 2px 2px 4px #fff;
+}
+
+/*butoon*/
+.btn-square {
+    font-size: 1.5rem;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #ff2a2a;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #7A051C;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    transition: 0.3s;
+    position: relative;
+}
+.btn-square::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 27px;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+.btn-square:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
 }
 
 /*背景フェード*/
 .fade{
     position: relative;
-	width: 80%;
 	height: 100vh; 
 	overflow: hidden; /* スライドがコンテナ外に出ないように非表示 */
     padding: 0;
     margin: 0 0 0 auto;
 }
+.fade li{
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .fade-img{
 	position: absolute; /* 位置を絶対指定で重ねて配置 */
- 	inset: 0; /*親要素内にフルサイズで配置*/
 	opacity: 0; /* 初期状態で透明に */
 	animation: slideAnime 15s infinite; /* 1サイクル15秒を無限ループ */
 }
 .fade-img img{
+    height: 720px;
     width: 100%;
     object-fit: cover;
 }
