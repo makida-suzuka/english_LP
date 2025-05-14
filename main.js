@@ -25,6 +25,21 @@ window.addEventListener('load', function(){
             content.classList.add('slide');
         }
     });
+
+    /* ズームインアニメーション */
+    window.addEventListener('scroll', function () {
+    const zoomItems = document.querySelectorAll('.student-voice');
+    const windowHeight = window.innerHeight;
+    const scroll = window.scrollY;
+
+    zoomItems.forEach(function (item) {
+        const offset = item.getBoundingClientRect().top + scroll;
+        if (scroll + windowHeight > offset + 100) {
+            item.classList.add('zoom-in');
+        }
+    });
+});
+
        
 });
     
