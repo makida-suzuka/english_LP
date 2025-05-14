@@ -13,6 +13,7 @@ a{
 
 
 body{
+    overflow-x: hidden; /*はみ出し防止*/
     letter-spacing: 1;
     margin: 0;
     color: #333333;
@@ -298,29 +299,38 @@ h1.logo{
 .reason-text p{
     margin: 0;
 }
+
+.reason-left,.reason-right{
+    position: relative;
+    opacity: 0;
+    transform: translateX(0); /* 念のため初期化 */
+    transition: all 1s ease;
+}
+
 .reason-left{
+    visibility: hidden;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 30px;
-    /* opacity: 0;
-    visibility: hidden;
     transform: translateX(-50%);
-    transition:all 1s; */
 }
 .reason-right{
+    visibility: hidden;
     margin: 0 0 0 auto;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    /* opacity: 0;
-    visibility: hodden;
     transform: translateX(50%); 
-    transition:all 1s;
-    */
 }
 
-.slide{
-    opacity: 1;
+/*表示するクラスが付いた時*/
+.reason-left.slide{
     visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+.reason-right.slide{
+    visibility: visible;
+    opacity: 1;
     transform: translateX(0);
 }
 

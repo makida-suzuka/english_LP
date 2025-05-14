@@ -16,18 +16,15 @@ window.addEventListener('load', function(){
         // 画面の高さを取得
         const windowHeight = window.innerHeight; 
         // すべてのreasonコンテンツを取得
-        const redContents = document.querySelector('.red-contents');
+        const redContents = document.querySelectorAll('.red-contents');
         
-        for(i = 0; i < redContents.length; i++){
-            console.log(redContents[i]);
-            
-            // reasonまでの高さ取得
-            const distanceToBox = redContents.offsetTOP;
-            //条件が成り立つときにslideclassを付与
-                if(scroll + windowHeight > distanceToBox) {
-                redContents[i].classList.add('slide');
-            }
+        redContents.forEach(function (content) {
+        const distanceToBox = content.getBoundingClientRect().top + window.scrollY;
+
+        if (scroll + windowHeight > distanceToBox + 100) { // 少し余裕を持たせる
+            content.classList.add('slide');
         }
+    });
        
 });
     
