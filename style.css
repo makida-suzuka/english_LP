@@ -182,18 +182,18 @@ h1.logo{
     position: relative;
 }
 .btn-square::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 27px;
-  width: 16px;
-  height: 16px;
-  margin: auto;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-  transform: rotate(45deg);
-  box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 27px;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    box-sizing: border-box;
 }
 .btn-square:hover {
     opacity: 0.9;
@@ -202,11 +202,7 @@ h1.logo{
 
 /*背景フェード*/
 .fade{
-    position: relative;
-	height: 100vh; 
-	overflow: hidden; /* スライドがコンテナ外に出ないように非表示 */
-    padding: 0;
-    margin: 0 0 0 auto;
+    margin: 0;
 }
 .fade li{
     width: 75%;
@@ -337,7 +333,7 @@ h1.logo{
 
 /*voice*/
 #voice{
-    width: 860px;
+    max-width: 860px;
     margin: 0 auto 120px auto;
 }
 .student-voice{
@@ -519,5 +515,81 @@ footer{
 
 /* SP */
 @media screen and (max-width:900px){
+   #header{
+        padding: 25px 0 0 25px;
+    }
+   .navi-logo{
+        position: absolute;
+        width: 100px;
+        top: 20px;
+        left: 20px;
+    }
+    .nav-menu{
+        margin: 110px 0 40px 0;
+    }
+    .hamburger-button{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 75px;
+        width: 75px;
+    }
+    .hamburger-button span{
+        display: block;
+        width: 35px;
+        height: 2px;
+        position: absolute;
+        left: 21px;
+    }
+    /*ハンバーガーボタン　押下後*/
+    .hamburger-button.active span:nth-child(1){
+        left: 21px;
+    }
+    /*メインビジュアル*/
+    #mainvisual{
+        height: 490px;
+        margin-bottom: 80px;
+    }
+    .mainvisual-text{
+        width: calc(100% - 32px);
+        top: 310px;
+        left: 16px;
+    }
+    .mainvisual-text p{
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin:0 0 10px 0;
+    }
+    /*ボタン*/
+    .btn-square{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /*背景フェード*/
+    .fade-img img{
+        height: 300px;
+    }
+    .fade li{
+        width: 100%;
+    }
+
+    /*reason*/
+    .red-bg{
+        padding: 40px 0 40px 0;
+    }
+    .red-contents{
+        box-sizing: border-box;
+        width: 95%;
+    }
+    .red-text{
+        font-size: 1.5rem;
+    }
+    .red-info{
+        font-size: 1.125rem;
+    }
+     
+    /*voice*/
     
+
+
 }
