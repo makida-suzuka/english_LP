@@ -39,18 +39,44 @@ h1.logo{
     width: 100vw;
     color: #fff;
     position: fixed;
-    z-index: 20;
+    z-index: 300;
     text-align: center;
-    transition :opacity 0.6s ease, visibility 0.6s ease;
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
 }
 .nav-btn{
+    margin-top: 50px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.1rem;
     color: #fff;
+    transition: 0.3s;
+    border: #FFF 1px solid;
+    display: block;
+    position: relative;
+    width: 250px ;
+    padding: 15px 0;
+}
+.nav-btn::after{
+    content: "";
+    width: 250px;
+    border-right: #FFF 1px solid;
+    border-bottom: #FFF 1px solid;
+    bottom: -6px;
+    right: -6px;
+    padding: 15px 0;
+    position: absolute;
+}
+.nav-btn:hover{
+    color: #FF2A2A;
+    background: #FFF;
 }
 .nav-menu{
     padding: 0;
 }
 .nav-menu li{
+    font-weight: bold;
     margin-bottom: 20px;
 }
 .nav-menu li a{
@@ -76,7 +102,7 @@ h1.logo{
     width: 100px;
     background-color: #FF2A2A;
     text-align: center;
-    z-index: 30;
+    z-index: 400;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -185,7 +211,6 @@ h1.logo{
     position: absolute;
     top: 0;
     right: 0;
-    height: 720px;
 }
 .fade-img{
 	position: absolute; /* 位置を絶対指定で重ねて配置 */
@@ -249,13 +274,12 @@ h1.logo{
 .red-bg{
     background-color: #FF2A2A;
     padding: 80px 0;
-    position: relative;
 }
 .red-contents{
     background-color: #FFF;
-    padding: 80px;
+    padding: 85px;
     display: flex;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: center;
 }
@@ -263,7 +287,6 @@ h1.logo{
     max-width: 100%;
     margin-right: 20px;
     height: 60px;
-
 }
 .red-text{
     font-weight: bold;
@@ -276,12 +299,26 @@ h1.logo{
 .reason-left{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-     animation: slide-left 0.5s ease-out 0s 1 forwards;
+    margin-bottom: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition:all 1s;
 }
 .reason-right{
+    margin: 0 0 0 auto;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(50%);
+    transition:all 1s;
+}
+
+.slide{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 
@@ -419,7 +456,7 @@ footer{
 .footer-wrap{
     padding: 0;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     max-width: 860px;
     margin: 0 auto;
     margin-bottom: 70px;
@@ -448,6 +485,6 @@ footer{
 }
 
 /* SP */
-@media screen and (max-width:485px){
-
+@media screen and (max-width:900px){
+    
 }

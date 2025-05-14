@@ -9,5 +9,29 @@ window.addEventListener('load', function(){
         
     });
 
+    /*左右スライドアニメーション */
+    window.addEventListener('scroll', function(){
+        // スクロール量を取得
+        const scroll = window.scrollY;
+        // 画面の高さを取得
+        const windowHeight = window.innerHeight; 
+        // すべてのreasonコンテンツを取得
+        const redContents = document.querySelector('.red-contents');
+        
+        for(i = 0; i < redContents.length; i++){
+            console.log(redContents[i]);
+            
+            // reasonまでの高さ取得
+            const distanceToBox = redContents.offsetTOP;
+            //条件が成り立つときにslideclassを付与
+                if(scroll + windowHeight > distanceToBox) {
+                redContents[i].classList.add('slide');
+            }
+        }
+       
+});
+    
 })
 
+/* 参考URL */
+/*  https://takechi-web.com/javascript-scroll-fadein/ */
