@@ -620,5 +620,35 @@ footer{
         border-top: 15px solid #E9F1FB;
     }
 
+    /*スクールの概要*/
+    .middle-title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin:0 0 10px 0;
+    }
+    .small-title{
+        font-weight: bold;
+        font-size: 1.0rem;
+        margin:0 0 20px 0;
+    }
+    .summary-content{
+        width: 100%;
+        padding: 30px;
+        margin: 0 20px 30px 20px;
+    }
+
+    /*entry*/
+    #entry{
+        padding: 0 20px;
+    }
+    .entry-title{
+        font-size: 1.5rem;
+    }
+    .entry-button{
+        font-size: 1.5rem;
+    }
+
+    /*footer*/
+
 
 }
