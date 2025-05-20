@@ -490,6 +490,9 @@ footer{
     margin: 0 auto;
     margin-bottom: 70px;
 }
+.footer-menu{
+    width: 100%;
+}
 .footer-menu p{
     font-weight: bold;
     font-size: 1.1rem;
@@ -499,7 +502,6 @@ footer{
 }
 .footer-menu-list li{
     padding: 0 0 5px 10px;
-    width: calc(860px / 4);
 }
 .footer-menu-list li a{
     color: #333333;
@@ -649,6 +651,14 @@ footer{
     }
 
     /*footer*/
-
+    .footer-wrap{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-menu{
+        width: 50%;
+        font-size: 0.75rem;
+    }
 
 }
