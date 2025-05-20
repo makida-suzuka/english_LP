@@ -409,7 +409,7 @@ h1.logo{
         background-position: 0 0;
     }
     100% {
-        background-position: -700px 700px;
+        background-position: -100% 100%;
     }
 }
 
