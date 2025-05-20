@@ -395,62 +395,24 @@ h1.logo{
 
 
 /*スクールの概要*/
-/* #summary{
+#summary{
     background-image: url(img/bg.gif);
     background-repeat: repeat;
     padding: 60px 0;
     margin-bottom: 120px;
     animation: moveBackground 10s linear infinite;
-} */
-
-#summary {
-    position: relative;
-    overflow: hidden;
-    padding: 60px 0;
-    margin-bottom: 120px;
 }
-
-#summary::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-image: url(img/bg.gif);
-    background-repeat: repeat;
-    animation: moveBgTransform 10s linear infinite;
-    z-index: -1;
-}
-
-@keyframes moveBgTransform {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-    100% {
-        transform: translate(0%, 0%);
-    }
-}
-
-/* @keyframes moveBgTransform {
-    0% {
-        transform: translate(0%, 0%);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-} */
-
 
 /*背景アニメーション*/
-/* @keyframes moveBackground {
+@keyframes moveBackground {
     0% {
-        background-position: 100% 0%;
+        background-position: 0 0;
     }
     100% {
-        background-position: 0% 100%;
+        background-position: -700px 700px;
     }
-} */
+}
+
 .summary-title{
     text-align: center;
 }
