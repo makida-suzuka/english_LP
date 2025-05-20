@@ -517,6 +517,9 @@ footer{
 
 /* SP */
 @media screen and (max-width:900px){
+    .sec-title{
+        font-size: 2rem;
+    }
    #header{
         padding: 25px 0 0 25px;
     }
