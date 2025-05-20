@@ -589,7 +589,36 @@ footer{
     }
      
     /*voice*/
-    
+    .student-voice .message{
+        max-width: 100%;
+        margin: 24px;
+    }
+    /*コメントと顔写真を縦並び*/
+    .student-voice{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .student-voice.right-balloon{
+        flex-direction: column;
+        align-items: center;
+    }
+    .student-voice .right-balloon{
+        margin: 24px;
+    }
+
+    /*吹き出し位置変更*/
+    .student-voice .message::before{
+        top: 104%;
+        left: 45%;
+        border: 15px solid transparent;
+        border-top: 15px solid #E9F1FB;
+    }
+    .student-voice .message.right-balloon::before{
+        top: 104%;
+        left: 45%;
+        border: 15px solid transparent;
+        border-top: 15px solid #E9F1FB;
+    }
 
 
 }
